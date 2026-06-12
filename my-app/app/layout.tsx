@@ -1,6 +1,3 @@
-import "./globals.css";
-import Navbar from "./components/Navbar";
-
 export default function RootLayout({
   children,
 }: {
@@ -8,16 +5,27 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gray-50">
-        
-        {/* Global Navbar */}
-        <Navbar />
+      <body>
+        <nav
+          style={{
+            padding: "20px",
+            background: "#f5f5f5",
+          }}
+        >
+          My Navbar
+        </nav>
 
-        {/* Page Content */}
-        <main className="min-h-screen">
-          {children}
-        </main>
-        
+        {children}
+
+        <footer
+          style={{
+            padding: "20px",
+            background: "#f5f5f5",
+            marginTop: "50px",
+          }}
+        >
+          My Footer
+        </footer>
       </body>
     </html>
   );
